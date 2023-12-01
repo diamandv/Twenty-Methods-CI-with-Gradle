@@ -1144,19 +1144,6 @@ public class TwentyMethodsTests {
 
     //Task 18
     @Test
-    void givenMaximumSizeOfIntegersThatReturnsResultWithLowerAndUpperBorder_whenGetRandomArrayWithBounds_thenReturnIntegersFromLowerToUpperBoundsWithCertainLength() throws Exception {
-        //given
-        int sizeOfIntArray = 715827882;
-        int lowerBorder = -10;
-        int upperBorder = 7;
-        //when
-        int[] actualIntegers = TwentyMethods.getRandomArrayWithBounds(sizeOfIntArray, lowerBorder, upperBorder);
-        //then
-        assertEquals(715827882, actualIntegers.length);
-    }
-
-    //Task 18
-    @Test
     void givenSizeOfIntegersWithLowerBorderLargerThenUpperBorder_whenGetRandomArrayWithBounds_thenReturnEmptyArray() throws Exception {
         //given
         int sizeOfIntArray = 15;

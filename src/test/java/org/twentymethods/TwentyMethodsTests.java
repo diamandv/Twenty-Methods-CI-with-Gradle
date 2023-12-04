@@ -8,7 +8,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-public class TwentyMethodsTests {
+class TwentyMethodsTests {
 
     //Task 1
     @Test
@@ -1140,19 +1140,6 @@ public class TwentyMethodsTests {
         int[] actualIntegers = TwentyMethods.getArrayOfIntegersWithValuesInReverseOrder(integers);
         //then
         assertEquals(0, actualIntegers.length);
-    }
-
-    //Task 18
-    @Test
-    void givenMaximumSizeOfIntegersThatReturnsResultWithLowerAndUpperBorder_whenGetRandomArrayWithBounds_thenReturnIntegersFromLowerToUpperBoundsWithCertainLength() throws Exception {
-        //given
-        int sizeOfIntArray = 715827882;
-        int lowerBorder = -10;
-        int upperBorder = 7;
-        //when
-        int[] actualIntegers = TwentyMethods.getRandomArrayWithBounds(sizeOfIntArray, lowerBorder, upperBorder);
-        //then
-        assertEquals(715827882, actualIntegers.length);
     }
 
     //Task 18

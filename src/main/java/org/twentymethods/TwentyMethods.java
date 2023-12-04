@@ -62,7 +62,10 @@ public class TwentyMethods {
 
     //    Task 4.2
     public static int findTheLargestOfThreeIntsUsingTernaryOperator(int a, int b, int c) {
-        return ((a > b) & (a > c)) ? a : ((b > c) ? b : c);
+        if ((a > b) & (a > c)) {
+            return a;
+        }
+        return b > c ? b : c;
     }
 
     //    Task 4.3
@@ -151,7 +154,7 @@ public class TwentyMethods {
 
     //    Task 10.1 - метод принимает инт, и возвращает факториал от заданого инта
     public static BigInteger findFactorial(int intFactor) {
-        if (intFactor < 0 | intFactor > 50) {
+        if (intFactor < 0 || intFactor > 50) {
             return BigInteger.valueOf(-1);
         }
         if (intFactor == 0) {
@@ -166,7 +169,7 @@ public class TwentyMethods {
 
     //    Task 10.2
     public static BigInteger findFactorialByRecursion(int intFactor) {
-        if (intFactor < 0 | intFactor > 50) {
+        if (intFactor < 0 || intFactor > 50) {
             return BigInteger.valueOf(-1);
         }
         if (intFactor == 0) {
@@ -321,14 +324,14 @@ public class TwentyMethods {
     //- нижняя граница
     //- верхняя граница
     //возвращает массив интов заданой длинный, который содержит случайные числа от нижней границы до верхней границы"
-    public static int[] getRandomArrayWithBounds(int sizeOfIntArray, int lowerBorder, int upperBorder) throws Exception {
+    public static int[] getRandomArrayWithBounds(int sizeOfIntArray, int lowerBorder, int upperBorder) throws IllegalArgumentException {
         Runtime r = Runtime.getRuntime();
-        int maxSizeOfArray = (int) ((r.maxMemory() / 4) * 0.95);
+        int maxSizeOfArray = (int) (((float) r.maxMemory() / 4) * 0.95);
         if ((lowerBorder >= upperBorder) || (sizeOfIntArray <= 0)) {
             return new int[0];
         }
         if (sizeOfIntArray > maxSizeOfArray) {
-            throw new Exception("Size of array is larger than program can handle");
+            throw new IllegalArgumentException("Size of array is larger than program can handle");
         }
         int[] newArrInt = new int[sizeOfIntArray];
         Random random = new Random();

@@ -8,6 +8,12 @@ import java.util.Random;
 
 public class TwentyMethods {
 
+    private static final Random random = new Random();
+
+    private TwentyMethods() {
+        throw new IllegalStateException("Utility class");
+    }
+
     //    Task 1 - принимает массив чаров, выводит его на экран
     public static String printCharArray(char[] arr) {
         if (checkIfCharArrayIsNullOrEmpty(arr)) {
@@ -334,7 +340,6 @@ public class TwentyMethods {
             throw new IllegalArgumentException("Size of array is larger than program can handle");
         }
         int[] newArrInt = new int[sizeOfIntArray];
-        Random random = new Random();
         for (int i = 0; i < sizeOfIntArray; i++) {
             int randomInt = random.nextInt(upperBorder - lowerBorder + 1) + lowerBorder;
             newArrInt[i] = randomInt;

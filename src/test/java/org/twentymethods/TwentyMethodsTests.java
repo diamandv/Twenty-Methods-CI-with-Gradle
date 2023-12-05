@@ -1379,4 +1379,5 @@ class TwentyMethodsTests {
         //then
         assertTrue(isSequence);
     }
+
 }

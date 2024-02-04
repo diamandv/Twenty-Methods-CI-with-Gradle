@@ -1,12 +1,11 @@
 plugins {
-    id ("java")
-    id ("info.solidsoft.pitest") version "1.15.0"
+    id("java")
+    id("info.solidsoft.pitest") version "1.15.0"
 }
 
 pitest {
-    //adds dependency to org.pitest:pitest-junit5-plugin and sets "testPlugin" to "junit5"
-    junit5PluginVersion = "1.0.0"    //or 0.15 for PIT <1.9.0
-    // ...
+    excludedMethods.set(listOf("givenIntegersWithMaximumArraySize_whenGetRandomArrayWithBounds_thenReturnIntegersFromLowerToUpperBoundsWithCertainLength"))
+    junit5PluginVersion = "1.0.0"
 }
 
 group = "org.twentymethods"

@@ -5,7 +5,7 @@ plugins {
 
 pitest {
     excludedMethods.set(listOf("givenIntegersWithMaximumArraySize_whenGetRandomArrayWithBounds_thenReturnIntegersFromLowerToUpperBoundsWithCertainLength"))
-    junit5PluginVersion = "1.0.0"    //or 0.15 for PIT <1.9.0
+    junit5PluginVersion = "1.0.0"
 }
 
 group = "org.twentymethods"

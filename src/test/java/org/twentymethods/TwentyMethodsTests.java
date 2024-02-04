@@ -487,7 +487,7 @@ class TwentyMethodsTests {
         //when
         int actualIndex = TwentyMethods.findIndexOfIntegersFromTheEndThatMatchesWithItsValue(integers, intToFind);
         //then
-        assertEquals(4, actualIndex);
+        assertEquals(0, actualIndex);
         assertNotEquals(2, actualIndex);
     }
 

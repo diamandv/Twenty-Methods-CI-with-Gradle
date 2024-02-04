@@ -4,12 +4,8 @@ plugins {
 }
 
 pitest {
-    //excludedMethods - did not help
     excludedMethods.set(listOf("givenIntegersWithMaximumArraySize_whenGetRandomArrayWithBounds_thenReturnIntegersFromLowerToUpperBoundsWithCertainLength"))
-    //adds dependency to org.pitest:pitest-junit5-plugin and sets "testPlugin" to "junit5"
     junit5PluginVersion = "1.0.0"    //or 0.15 for PIT <1.9.0
-    // ...
-
 }
 
 group = "org.twentymethods"

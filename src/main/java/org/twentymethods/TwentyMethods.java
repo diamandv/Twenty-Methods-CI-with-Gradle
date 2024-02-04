@@ -152,7 +152,7 @@ public class TwentyMethods {
         }
         for (int i = integers.length - 1; i >= 0; i--) {
             if (integers[i] == intToFind) {
-                return i;
+                return integers.length - i - 1;
             }
         }
         return a;
